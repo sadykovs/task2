@@ -1,11 +1,9 @@
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '../ff/ff_theme.dart';
+import '../ff/ff_widgets.dart';
+import '../ff/ffdd_template.dart';
 import '../product1/product1_widget.dart';
 import '../testtask/testtask_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SecondWidget extends StatefulWidget {
   SecondWidget({Key key}) : super(key: key);
@@ -42,14 +40,14 @@ class _SecondWidgetState extends State<SecondWidget> {
             fit: BoxFit.none,
           ),
         ),
-        title: FlutterFlowDropDown(
+        title: FFDropDown(
           options: ['Челябинск', 'Москва', 'Санкт-Петербург', 'Уфа'],
           onChanged: (value) {
             setState(() => dropDownValue = value);
           },
           width: 130,
           height: 40,
-          textStyle: FlutterFlowTheme.bodyText1.override(
+          textStyle: FFTheme.bodyText1.override(
             fontFamily: 'Noto Sans',
             color: Colors.black,
           ),
@@ -104,14 +102,14 @@ class _SecondWidgetState extends State<SecondWidget> {
                       children: [
                         Text(
                           'Juanita Nguyen',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: FFTheme.bodyText1.override(
                             fontFamily: 'Noto Sans',
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           'somemail@mail.com',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: FFTheme.bodyText1.override(
                             fontFamily: 'Noto Sans',
                             fontWeight: FontWeight.w500,
                           ),
@@ -138,7 +136,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                   padding: EdgeInsets.fromLTRB(45, 41, 0, 0),
                   child: Text(
                     'Все меню',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 16,
                     ),
@@ -153,7 +151,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                   padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
                   child: Text(
                     'Заказы',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 16,
                     ),
@@ -177,7 +175,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                   padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
                   child: Text(
                     'Корзина',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 16,
                     ),
@@ -278,7 +276,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                         },
                         child: Text(
                           'Все',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: FFTheme.bodyText1.override(
                             fontFamily: 'Noto Sans',
                             fontWeight: FontWeight.normal,
                           ),
@@ -297,7 +295,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       },
                       child: Text(
                         'Пицца',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -305,13 +303,13 @@ class _SecondWidgetState extends State<SecondWidget> {
                     ),
                     Text(
                       'Кебаб',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                       ),
                     ),
                     Text(
                       'Бургер',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                       ),
                     )
@@ -345,7 +343,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                     child: Text(
                       'Дерзкая Марго',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -371,7 +369,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                       child: Text(
                         '4,5',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -381,7 +379,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                       child: Text(
                         '(100+)',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w300,
                         ),
@@ -391,7 +389,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                       child: Text(
                         '25-30 мин',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
                         ),
@@ -408,7 +406,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     ),
                     Text(
                       '300',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
@@ -434,7 +432,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     width: 285,
                     height: 40,
                     color: Color(0xFFF2CB3A),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
+                    textStyle: FFTheme.subtitle2.override(
                       fontFamily: 'Noto Sans',
                       color: Colors.black,
                       fontSize: 14,
@@ -461,7 +459,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                     child: Text(
                       'Горячий парень',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -487,7 +485,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                       child: Text(
                         '4,5',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -497,7 +495,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                       child: Text(
                         '(100+)',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w300,
                         ),
@@ -507,7 +505,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                       child: Text(
                         '25-30 мин',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
                         ),
@@ -524,7 +522,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     ),
                     Text(
                       '300',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
@@ -550,7 +548,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     width: 285,
                     height: 40,
                     color: Color(0xFFF2CB3A),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
+                    textStyle: FFTheme.subtitle2.override(
                       fontFamily: 'Noto Sans',
                       color: Colors.black,
                       fontSize: 14,
@@ -577,7 +575,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                     child: Text(
                       'Вкусняшка Миа',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -603,7 +601,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                       child: Text(
                         '4,5',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -613,7 +611,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                       child: Text(
                         '(100+)',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w300,
                         ),
@@ -623,7 +621,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                       child: Text(
                         '25-30 мин',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
                         ),
@@ -640,7 +638,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     ),
                     Text(
                       '300',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
@@ -666,7 +664,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     width: 285,
                     height: 40,
                     color: Color(0xFFF2CB3A),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
+                    textStyle: FFTheme.subtitle2.override(
                       fontFamily: 'Noto Sans',
                       color: Colors.black,
                       fontSize: 14,
@@ -693,7 +691,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                     child: Text(
                       'Сытый Питт',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -719,7 +717,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                       child: Text(
                         '4,5',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -729,7 +727,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                       child: Text(
                         '(100+)',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.w300,
                         ),
@@ -739,7 +737,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                       child: Text(
                         '25-30 мин',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.bold,
                         ),
@@ -756,7 +754,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     ),
                     Text(
                       '300',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
@@ -782,7 +780,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                     width: 285,
                     height: 40,
                     color: Color(0xFFF2CB3A),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
+                    textStyle: FFTheme.subtitle2.override(
                       fontFamily: 'Noto Sans',
                       color: Colors.black,
                       fontSize: 14,

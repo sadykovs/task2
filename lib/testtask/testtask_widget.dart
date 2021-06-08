@@ -1,11 +1,9 @@
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '../ff/ff_theme.dart';
+import '../ff/ff_widgets.dart';
+import '../ff/ffdd_template.dart';
 import '../product1/product1_widget.dart';
 import '../second/second_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TesttaskWidget extends StatefulWidget {
   TesttaskWidget({Key key}) : super(key: key);
@@ -16,12 +14,14 @@ class TesttaskWidget extends StatefulWidget {
 
 class _TesttaskWidgetState extends State<TesttaskWidget> {
   String dropDownValue;
+  TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
     dropDownValue = 'Челябинск';
+    textController = TextEditingController();
   }
 
   @override
@@ -42,14 +42,14 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
             fit: BoxFit.none,
           ),
         ),
-        title: FlutterFlowDropDown(
+        title: FFDropDown(
           options: ['Челябинск', 'Москва', 'Санкт-Петербург', 'Уфа'],
           onChanged: (value) {
             setState(() => dropDownValue = value);
           },
           width: 130,
           height: 40,
-          textStyle: FlutterFlowTheme.bodyText1.override(
+          textStyle: FFTheme.bodyText1.override(
             fontFamily: 'Noto Sans',
             color: Colors.black,
           ),
@@ -104,14 +104,14 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                       children: [
                         Text(
                           'Juanita Nguyen',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: FFTheme.bodyText1.override(
                             fontFamily: 'Noto Sans',
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           'somemail@mail.com',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: FFTheme.bodyText1.override(
                             fontFamily: 'Noto Sans',
                             fontWeight: FontWeight.w500,
                           ),
@@ -136,11 +136,21 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
               children: [
                 Padding(
                   padding: EdgeInsets.fromLTRB(45, 41, 0, 0),
-                  child: Text(
-                    'Все меню',
-                    style: FlutterFlowTheme.bodyText1.override(
-                      fontFamily: 'Noto Sans',
-                      fontSize: 16,
+                  child: InkWell(
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TesttaskWidget(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Все меню',
+                      style: FFTheme.bodyText1.override(
+                        fontFamily: 'Noto Sans',
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 )
@@ -153,7 +163,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
                   child: Text(
                     'Заказы',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 16,
                     ),
@@ -177,7 +187,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
                   child: Text(
                     'Корзина',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 16,
                     ),
@@ -208,7 +218,6 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
-                      width: 1000,
                       height: 100,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
@@ -226,7 +235,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                                   padding: EdgeInsets.fromLTRB(47, 0, 0, 0),
                                   child: Text(
                                     'Голоден?',
-                                    style: FlutterFlowTheme.bodyText1.override(
+                                    style: FFTheme.bodyText1.override(
                                       fontFamily: 'Noto Sans',
                                       fontSize: 36,
                                     ),
@@ -237,26 +246,45 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                           )
                         ],
                       ),
-                    ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFEEEEEE),
-                      ),
                     )
                   ],
-                ),
-                Image.network(
-                  'https://picsum.photos/seed/909/600',
-                  width: 100,
-                  height: 100,
-                  fit: BoxFit.cover,
+                )
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(40, 0, 33, 0),
+                    child: TextFormField(
+                      controller: textController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: 'Поиск по меню',
+                        labelStyle: FFTheme.bodyText1.override(
+                          fontFamily: 'Noto Sans',
+                          fontSize: 16,
+                        ),
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        contentPadding: EdgeInsets.fromLTRB(38, 0, 0, 0),
+                        prefixIcon: Icon(
+                          Icons.search_rounded,
+                        ),
+                      ),
+                      style: FFTheme.bodyText1.override(
+                        fontFamily: 'Noto Sans',
+                        fontSize: 16,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
                 )
               ],
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 113, 0, 0),
+              padding: EdgeInsets.fromLTRB(0, 46, 0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -309,7 +337,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
                     child: Text(
                       'Все',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -327,7 +355,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     },
                     child: Text(
                       'Пицца',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.normal,
                       ),
@@ -335,13 +363,13 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   ),
                   Text(
                     'Кебаб',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                     ),
                   ),
                   Text(
                     'Бургер',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                     ),
                   )
@@ -384,7 +412,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     },
                     child: Text(
                       'Дерзкая Марго',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -411,7 +439,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Text(
                       '4,5',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -421,7 +449,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                     child: Text(
                       '(100+)',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.w300,
                       ),
@@ -431,7 +459,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                     child: Text(
                       '25-30 мин',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
                       ),
@@ -448,7 +476,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   ),
                   Text(
                     '300',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
@@ -474,7 +502,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   width: 285,
                   height: 40,
                   color: Color(0xFFF2CB3A),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
+                  textStyle: FFTheme.subtitle2.override(
                     fontFamily: 'Noto Sans',
                     color: Colors.black,
                     fontSize: 14,
@@ -501,7 +529,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                   child: Text(
                     'Вкусняшка Миа',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.bold,
                     ),
@@ -527,7 +555,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Text(
                       '4,5',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -537,7 +565,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                     child: Text(
                       '(100+)',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.w300,
                       ),
@@ -547,7 +575,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                     child: Text(
                       '25-30 мин',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
                       ),
@@ -564,7 +592,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   ),
                   Text(
                     '300',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
@@ -584,7 +612,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   width: 285,
                   height: 40,
                   color: Color(0xFFF2CB3A),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
+                  textStyle: FFTheme.subtitle2.override(
                     fontFamily: 'Noto Sans',
                     color: Colors.black,
                     fontSize: 14,
@@ -611,7 +639,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                   child: Text(
                     'Сытый Пит',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.bold,
                     ),
@@ -637,7 +665,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Text(
                       '4,5',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -647,7 +675,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                     child: Text(
                       '(100+)',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.w300,
                       ),
@@ -657,7 +685,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                     child: Text(
                       '25-30 мин',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
                       ),
@@ -674,7 +702,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   ),
                   Text(
                     '300',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
@@ -694,7 +722,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   width: 285,
                   height: 40,
                   color: Color(0xFFF2CB3A),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
+                  textStyle: FFTheme.subtitle2.override(
                     fontFamily: 'Noto Sans',
                     color: Colors.black,
                     fontSize: 14,
@@ -721,7 +749,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   padding: EdgeInsets.fromLTRB(45, 16, 0, 0),
                   child: Text(
                     'Горячий парень',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.bold,
                     ),
@@ -747,7 +775,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Text(
                       '4,5',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.bold,
                       ),
@@ -757,7 +785,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                     child: Text(
                       '(100+)',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
                         fontWeight: FontWeight.w300,
                       ),
@@ -767,7 +795,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                     padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                     child: Text(
                       '25-30 мин',
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: FFTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
                       ),
@@ -784,7 +812,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   ),
                   Text(
                     '300',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
@@ -804,7 +832,7 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                   width: 285,
                   height: 40,
                   color: Color(0xFFF2CB3A),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
+                  textStyle: FFTheme.subtitle2.override(
                     fontFamily: 'Noto Sans',
                     color: Colors.black,
                     fontSize: 14,

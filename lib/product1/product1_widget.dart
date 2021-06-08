@@ -1,9 +1,7 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '../ff/ff_widgets.dart';
+import '../ff/ff_theme.dart';
 import '../testtask/testtask_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Product1Widget extends StatefulWidget {
   Product1Widget({Key key}) : super(key: key);
@@ -91,7 +89,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
                   child: Text(
                     'Дерзкая Марго',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -116,7 +114,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                   child: Text(
                     '4,5',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.bold,
                     ),
@@ -126,7 +124,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   padding: EdgeInsets.fromLTRB(11, 0, 0, 0),
                   child: Text(
                     '(100+)',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.w300,
                     ),
@@ -136,7 +134,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
                   child: Text(
                     '25-30 мин',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.bold,
                     ),
@@ -153,7 +151,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                 ),
                 Text(
                   '300',
-                  style: FlutterFlowTheme.bodyText1.override(
+                  style: FFTheme.bodyText1.override(
                     fontFamily: 'Noto Sans',
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
@@ -169,7 +167,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   padding: EdgeInsets.fromLTRB(45, 0, 0, 15),
                   child: Text(
                     'Et consectetur commodo ut\n consectetur ex nulla voluptate \ncommodo ipsum incididunt qui dolor. ',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                       fontWeight: FontWeight.w300,
                     ),
@@ -194,7 +192,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                   width: 285,
                   height: 40,
                   color: Color(0xFFF2CB3A),
-                  textStyle: FlutterFlowTheme.subtitle2.override(
+                  textStyle: FFTheme.subtitle2.override(
                     fontFamily: 'Noto Sans',
                     color: Colors.black,
                     fontSize: 14,
@@ -228,7 +226,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                       },
                       child: Text(
                         'Дополнительно',
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontWeight: FontWeight.bold,
                         ),
@@ -237,13 +235,13 @@ class _Product1WidgetState extends State<Product1Widget> {
                   ),
                   Text(
                     'Похожие',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                     ),
                   ),
                   Text(
                     'Отзывы',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: FFTheme.bodyText1.override(
                       fontFamily: 'Noto Sans',
                     ),
                   )
@@ -272,7 +270,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                       child: Text(
                         '________',
                         textAlign: TextAlign.start,
-                        style: FlutterFlowTheme.bodyText1.override(
+                        style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -319,7 +317,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               child: Text(
                                 'Просто кофе                            200 руб',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -340,7 +338,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               },
                               child: Text(
                                 'Вкусный зерновой кофеечек',
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -385,7 +383,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               child: Text(
                                 'Просто кофе                            200 руб',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -406,7 +404,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               },
                               child: Text(
                                 'Вкусный зерновой кофеечек',
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -451,7 +449,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               child: Text(
                                 'Просто кофе                            200 руб',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -472,7 +470,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               },
                               child: Text(
                                 'Вкусный зерновой кофеечек',
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -517,7 +515,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               child: Text(
                                 'Просто кофе                            200 руб',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -538,7 +536,7 @@ class _Product1WidgetState extends State<Product1Widget> {
                               },
                               child: Text(
                                 'Вкусный зерновой кофеечек',
-                                style: FlutterFlowTheme.bodyText1.override(
+                                style: FFTheme.bodyText1.override(
                                   fontFamily: 'Noto Sans',
                                   fontWeight: FontWeight.w300,
                                 ),

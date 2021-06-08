@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FlutterFlowDropDown extends StatefulWidget {
-  const FlutterFlowDropDown({
+class FFDropDown extends StatefulWidget {
+  const FFDropDown({
     @required this.options,
     @required this.onChanged,
     this.icon,
@@ -30,10 +30,10 @@ class FlutterFlowDropDown extends StatefulWidget {
   final EdgeInsetsGeometry margin;
 
   @override
-  State<FlutterFlowDropDown> createState() => _FlutterFlowDropDownState();
+  State<FFDropDown> createState() => _FFDropDownState();
 }
 
-class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
+class _FFDropDownState extends State<FFDropDown> {
   String dropDownValue;
   List<String> effectiveOptions;
 
