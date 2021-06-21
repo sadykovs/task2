@@ -1,6 +1,4 @@
-import '../ff/ff_theme.dart';
-import '../ff/ff_widgets.dart';
-import '../ff/ffdd_template.dart';
+import '../ff_theme.dart';
 import '../product1/product1_widget.dart';
 import '../testtask/testtask_widget.dart';
 import 'package:flutter/material.dart';
