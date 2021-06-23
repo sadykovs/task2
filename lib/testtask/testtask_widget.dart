@@ -1,3 +1,6 @@
+import '../fourth/fourth_widget.dart';
+import 'package:task/navigation_drawer_widget.dart';
+import '../third/third_widget.dart';
 import '../ff_theme.dart';
 import '../product1/product1_widget.dart';
 import '../second/second_widget.dart';
@@ -24,187 +27,10 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    var scaffold = Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        leading: InkWell(
-          onTap: () async {
-            scaffoldKey.currentState.openDrawer();
-          },
-          child: Image.asset(
-            'assets/images/d.png',
-            width: 24,
-            height: 24,
-            fit: BoxFit.none,
-          ),
-        ),
-        title: FFDropDown(
-          options: ['Челябинск', 'Москва', 'Санкт-Петербург', 'Уфа'],
-          onChanged: (value) {
-            setState(() => dropDownValue = value);
-          },
-          width: 130,
-          height: 40,
-          textStyle: FFTheme.bodyText1.override(
-            fontFamily: 'Noto Sans',
-            color: Colors.black,
-          ),
-          fillColor: Colors.white,
-          elevation: 2,
-          borderColor: Colors.transparent,
-          borderWidth: 0,
-          borderRadius: 0,
-          margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
-        ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 0, 48, 0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(5),
-              child: Image.asset(
-                'assets/images/ShoppingCart.png',
-                width: 24,
-                height: 24,
-                fit: BoxFit.contain,
-              ),
-            ),
-          )
-        ],
-        centerTitle: false,
-        elevation: 0,
-      ),
-      drawer: Drawer(
-        elevation: 16,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 55, 0, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
-                    child: Image.asset(
-                      'assets/images/user.png',
-                      width: 45,
-                      height: 45,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Juanita Nguyen',
-                          style: FFTheme.bodyText1.override(
-                            fontFamily: 'Noto Sans',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          'somemail@mail.com',
-                          style: FFTheme.bodyText1.override(
-                            fontFamily: 'Noto Sans',
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Image.asset(
-                      'assets/images/SignOut.png',
-                      width: 24,
-                      height: 24,
-                      fit: BoxFit.cover,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(45, 41, 0, 0),
-                  child: InkWell(
-                    onTap: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => TesttaskWidget(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Все меню',
-                      style: FFTheme.bodyText1.override(
-                        fontFamily: 'Noto Sans',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
-                  child: Text(
-                    'Заказы',
-                    style: FFTheme.bodyText1.override(
-                      fontFamily: 'Noto Sans',
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(153, 23, 0, 0),
-                  child: Image.asset(
-                    'assets/images/3.png',
-                    width: 24,
-                    height: 24,
-                    fit: BoxFit.fill,
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(45, 23, 0, 0),
-                  child: Text(
-                    'Корзина',
-                    style: FFTheme.bodyText1.override(
-                      fontFamily: 'Noto Sans',
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(147, 23, 0, 0),
-                  child: Image.asset(
-                    'assets/images/6.png',
-                    width: 17,
-                    height: 17,
-                    fit: BoxFit.contain,
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
-      ),
+      appBar: BuildAppBar(),
+      drawer: NavigationDrawerWidget(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -287,11 +113,22 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    'assets/images/all.png',
-                    width: 36,
-                    height: 36,
-                    fit: BoxFit.cover,
+                  InkWell(
+                    onTap: () async {
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TesttaskWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/all.png',
+                      width: 36,
+                      height: 36,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   InkWell(
                     onTap: () async {
@@ -310,18 +147,40 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  Image.asset(
-                    'assets/images/kebab.png',
-                    width: 36,
-                    height: 36,
-                    fit: BoxFit.cover,
+                  InkWell(
+                    onTap: () async {
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ThirdWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/kebab.png',
+                      width: 36,
+                      height: 36,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                  Image.asset(
-                    'assets/images/burger.png',
-                    width: 36,
-                    height: 36,
-                    fit: BoxFit.cover,
-                  )
+                  InkWell(
+                    onTap: () async {
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FourthWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/burger.png',
+                      width: 36,
+                      height: 36,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -847,6 +706,59 @@ class _TesttaskWidgetState extends State<TesttaskWidget> {
           ],
         ),
       ),
+    );
+    return scaffold;
+  }
+
+  AppBar BuildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      automaticallyImplyLeading: false,
+      leading: InkWell(
+        onTap: () async {
+          scaffoldKey.currentState.openDrawer();
+        },
+        child: Image.asset(
+          'assets/images/d.png',
+          width: 24,
+          height: 24,
+          fit: BoxFit.none,
+        ),
+      ),
+      title: FFDropDown(
+        options: ['Челябинск', 'Москва', 'Санкт-Петербург', 'Уфа'],
+        onChanged: (value) {
+          setState(() => dropDownValue = value);
+        },
+        width: 130,
+        height: 40,
+        textStyle: FFTheme.bodyText1.override(
+          fontFamily: 'Noto Sans',
+          color: Colors.black,
+        ),
+        fillColor: Colors.white,
+        elevation: 2,
+        borderColor: Colors.transparent,
+        borderWidth: 0,
+        borderRadius: 0,
+        margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
+      ),
+      actions: [
+        Padding(
+          padding: EdgeInsets.fromLTRB(0, 0, 48, 0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image.asset(
+              'assets/images/ShoppingCart.png',
+              width: 24,
+              height: 24,
+              fit: BoxFit.contain,
+            ),
+          ),
+        )
+      ],
+      centerTitle: false,
+      elevation: 0,
     );
   }
 }
