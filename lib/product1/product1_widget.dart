@@ -1,6 +1,7 @@
 import '../ff_theme.dart';
 import '../testtask/testtask_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:pedantic/pedantic.dart';
 
 class Product1Widget extends StatefulWidget {
   Product1Widget({Key key}) : super(key: key);

@@ -1,20 +1,19 @@
 import 'package:task/fourth/fourth_widget.dart';
-import 'package:task/third/third_widget.dart';
-
+import 'package:task/second/second_widget.dart';
 import '../ff_theme.dart';
 import '../product1/product1_widget.dart';
 import '../testtask/testtask_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:task/navigation_drawer_widget.dart';
 
-class SecondWidget extends StatefulWidget {
-  SecondWidget({Key key}) : super(key: key);
+class ThirdWidget extends StatefulWidget {
+  ThirdWidget({Key key}) : super(key: key);
 
   @override
-  _SecondWidgetState createState() => _SecondWidgetState();
+  _ThirdWidgetState createState() => _ThirdWidgetState();
 }
 
-class _SecondWidgetState extends State<SecondWidget> {
+class _ThirdWidgetState extends State<ThirdWidget> {
   String dropDownValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -145,7 +144,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                         await Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SecondWidget(),
+                            builder: (context) => ThirdWidget(),
                           ),
                           (r) => false,
                         );
@@ -154,7 +153,6 @@ class _SecondWidgetState extends State<SecondWidget> {
                         'Пицца',
                         style: FFTheme.bodyText1.override(
                           fontFamily: 'Noto Sans',
-                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -162,6 +160,7 @@ class _SecondWidgetState extends State<SecondWidget> {
                       'Кебаб',
                       style: FFTheme.bodyText1.override(
                         fontFamily: 'Noto Sans',
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(

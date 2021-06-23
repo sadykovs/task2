@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:pedantic/pedantic.dart';
 
 class FFTheme {
   static const Color primaryColor = Color(0xFF3474E0);
